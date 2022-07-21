@@ -11,3 +11,15 @@ and include in form.html*/
     margin: .7em;
 }
 
+.a-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+    width: 100%;
+}
+
+.back-btn {
+    padding: .5em;
+    border-radius: 6px;
+}

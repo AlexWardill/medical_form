@@ -1,8 +1,8 @@
 {% extends './base.html' %}
 
 {% block content %}
-<form class="form" method="post">
-    {% csrf_token %}
+<form class="form" method="post" action="/response">
+    {% csrf_token %}    
     <input type="text" placeholder="Name" name="name" class="form-control">
     <input type="text" placeholder="Email address" name="email" class="form-control">
     <input type="tel" placeholder="Phone number" name="phone_number" class="form-control"> 
