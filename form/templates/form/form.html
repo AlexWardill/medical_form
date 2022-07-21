@@ -1,1 +1,15 @@
 {% extends './base.html' %}
+
+{% block content %}
+<p>this is the form page</p>
+<form class="form">
+    <input type="text" placeholder="Name" class="form-control">
+    <input type="text" placeholder="Email address" class="form-control">
+    <input type="tel" placeholder="Phone number" class="form-control"> 
+    <input type="text" placeholder="Address" class="form-control">
+    <input type="text" placeholder="City" class="form-control">
+    <input type="text" placeholder="Postcode" class="form-control">
+
+    <input type="submit" class="btn btn-primary">
+</form>
+{% endblock content %}

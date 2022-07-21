@@ -1,0 +1,13 @@
+/* ideally put this in a separate css file specifically for form styling
+and include in form.html*/
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form input {
+    padding: .2em;
+    margin: .7em;
+}
+
