@@ -9,9 +9,9 @@ def response(request):
         name = request.POST['name']
         email = request.POST['email']
         phone_number = request.POST['phone_number']
-        address = address.POST['address']
-        city = city.POST['city']
-        postcode = postcode.POST['postcode']
+        address = request.POST['address']
+        city = request.POST['city']
+        postcode = request.POST['postcode']
 
         information = Response.objects.create(
             name=name,
@@ -20,5 +20,7 @@ def response(request):
             address=address,
             city=city,
             postcode=postcode)
+
+    # send email here.
 
     return render(request, 'form/response.html')
