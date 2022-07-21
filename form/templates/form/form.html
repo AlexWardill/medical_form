@@ -1,14 +1,14 @@
 {% extends './base.html' %}
 
 {% block content %}
-<p>this is the form page</p>
-<form class="form">
-    <input type="text" placeholder="Name" class="form-control">
-    <input type="text" placeholder="Email address" class="form-control">
-    <input type="tel" placeholder="Phone number" class="form-control"> 
-    <input type="text" placeholder="Address" class="form-control">
-    <input type="text" placeholder="City" class="form-control">
-    <input type="text" placeholder="Postcode" class="form-control">
+<form class="form" method="post">
+    {% csrf_token %}
+    <input type="text" placeholder="Name" name="name" class="form-control">
+    <input type="text" placeholder="Email address" name="email" class="form-control">
+    <input type="tel" placeholder="Phone number" name="phone_number" class="form-control"> 
+    <input type="text" placeholder="Address" name="address" class="form-control">
+    <input type="text" placeholder="City" name="city" class="form-control">
+    <input type="text" placeholder="Postcode" name="postcode" class="form-control">
 
     <input type="submit" class="btn btn-primary">
 </form>
