@@ -6,7 +6,7 @@ and include in form.html*/
     flex-direction: column;
 }
 
-.form input {
+.form-control {
     padding: .2em;
     margin: .7em;
 }

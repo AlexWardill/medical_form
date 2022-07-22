@@ -9,7 +9,13 @@
     <input type="text" placeholder="Address" name="address" class="form-control">
     <input type="text" placeholder="City" name="city" class="form-control">
     <input type="text" placeholder="Postcode" name="postcode" class="form-control">
-    <!-- ADD DRPODOWN -->
+    <!-- Not styled correctly, dropdown is not inline with the other components -->
+    <select class="form-control"> 
+        <option value="1">Condition 1</option>
+        <option value="2">Condition 2</option>
+        <option value="3">Condition 3</option>
+    </select>
+    <input type="text" placeholder="Other" name="other" class="form-control">
     <input type="submit" class="btn btn-primary">
 </form>
 {% endblock content %}
