@@ -8,10 +8,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
+# I'm assuming this should be stored elsewhere... in .env?
 SECRET_KEY = 'django-insecure-umh(txmue1xoy0sw7ih8v&h9yuwi9fivwa2d=ti&2b%f!h%!=*'
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
+NYLAS_CLIENT_ID = os.getenv('CLIENT_ID')
+NYLAS_CLIENT_SECRET = os.getenv('CLIENT_SECRET')
+NYLAS_ACCESS_TOKEN = os.getenv('ACCESS_TOKEN')
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.getenv('DEBUG')
 
 ALLOWED_HOSTS = []
 

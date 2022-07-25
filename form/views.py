@@ -1,6 +1,10 @@
 from django.shortcuts import render
 from .models import Response
 from nylas import APIClient
+import os
+settings = os.system("python medical_form/settings.py")
+
+# from settings import NYLAS_CLIENT_ID, NYLAS_CLIENT_SECRET, NYLAS_ACCESS_TOKEN
 
 def form(request):
     return render(request, 'form/form.html')
@@ -9,10 +13,9 @@ def form(request):
 # but I have left it here in order to try the email functionality.
 # I looked into storing these as environment variables but didn't have enough time
 
-
-# CLIENT_ID = 'xxxxxxxxxxxxxxxxxxxxxxxxx'
-# CLIENT_SECRET = 'xxxxxxxxxxxxxxxxxxxxxxxxx'
-# ACCESS_TOKEN = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+CLIENT_ID = os.environ['CLIENT_ID']
+CLIENT_SECRET = os.environ['CLIENT_SECRET']
+ACCESS_TOKEN = os.environ['ACCESS_TOKEN']
 
 def response(request):
     # Store form data
